@@ -53,12 +53,12 @@ const AuthController = {
     const { email, password } = req.body;
 
     const user = await UserSchema.findOne({ email: email });
-    console.log(user.email);
+
     if (!user) {
       return res.status(400).json({ err: "Email not registered" });
     }
     const checkPassword = await bcrypt.compare(password, user.password);
-    console.log(checkPassword);
+
     if (!checkPassword) {
       return res.status(400).json({ err: "Invalid password" });
     }
