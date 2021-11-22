@@ -13,4 +13,4 @@ app.use(express.static("public"));
 app.use(routes);
 mongoose.connect("mongodb://localhost/partyTime");
 
-app.listen(8001);
+app.listen(8000);
