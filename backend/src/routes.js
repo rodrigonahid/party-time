@@ -11,6 +11,12 @@ router.post("/login", AuthController.login);
 router.get("/user/:id", TokenMiddleware, UserController.get);
 router.put("/user", TokenMiddleware, UserController.update);
 
-router.get("/party", TokenMiddleware, PartyController.get);
+router.get("/party", PartyController.get);
+router.post(
+  "/party",
+  TokenMiddleware,
+  PartyController.multer,
+  PartyController.create
+);
 
 module.exports = router;
