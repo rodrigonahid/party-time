@@ -1,8 +1,10 @@
 <template>
-  <div class="">
-    <router-link to="/">Teste</router-link>
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
+  <div class="navbar">
+    <header>
+      <a href="/">Teste</a>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </header>
   </div>
 </template>
 
@@ -10,4 +12,10 @@
 export default {};
 </script>
 
-<style></style>
+<style lang="scss">
+.navbar {
+  header {
+    background: red;
+  }
+}
+</style>
