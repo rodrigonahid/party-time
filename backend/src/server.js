@@ -9,8 +9,8 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public"));
 // Conexao mongodb
+mongoose.connect("mongodb://localhost/partyTime");
 // Routes
 app.use(routes);
-mongoose.connect("mongodb://localhost/partyTime");
 
 app.listen(8000);
